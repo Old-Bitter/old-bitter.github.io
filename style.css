@@ -1,0 +1,36 @@
+body {
+  background-color: #444444;
+  font-family: Tahoma;
+  text-align: justify;
+  font-size: 12pt;
+}
+h1 {
+  color: #ff7700;
+  font-size: 24pt;
+  text-align: center;
+  background-color: #000000;
+}
+h4 {
+  color: #ff7700;
+  font-size: 12pt;
+  background-color: #000000;
+}
+p {
+  color: #90fe00;
+}
+.header {
+  width:100%;
+  overflow-inline: auto;
+}
+.main {
+  width:70%;
+  float:left;
+}
+.menu {
+  width:30%;
+  float:right;
+}
+.footer {
+  width:100%;
+  overflow-inline: auto;
+}
