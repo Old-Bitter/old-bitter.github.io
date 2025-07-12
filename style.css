@@ -61,3 +61,17 @@ ul {
   list-style-image: url('images/bulletbone.png');
   color:#90fe00;
 }
+a:link {
+  color: #ff7700;
+  text-decoration: underline;
+}
+a:visited {
+  color: #000000;
+  text-decoration: line-through;
+}
+a:hover {
+  color: #000000;
+}
+a:active {
+  color: #000000;
+}
