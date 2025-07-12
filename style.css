@@ -1,6 +1,6 @@
 body {
   background-color: #444444;
-  font-family: Tahoma;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: justify;
   font-size: 12pt;
 }
@@ -17,6 +17,13 @@ h4 {
 }
 p {
   color: #90fe00;
+  text-align: justify;
+  padding-left: 10pt;
+  padding-right: 10pt;
+}
+b {
+  font-weight: 200;
+  color: #ff0073;
 }
 .header {
   width:100%;
