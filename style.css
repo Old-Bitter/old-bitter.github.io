@@ -36,7 +36,6 @@ b {
 }
 .header {
   width:100%;
-  overflow-inline: auto;
   border-top: #000000;
   border-bottom-style: dashed;
 }
@@ -54,7 +53,6 @@ b {
 }
 .footer {
   width:100%;
-  overflow-inline: auto;
   border-top: #000000;
   border-top-style: dashed;
   text-align: center;
