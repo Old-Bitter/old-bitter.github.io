@@ -44,17 +44,18 @@ b {
   height: 90%;
   float:left;
   border-top: #000000;
+  border-bottom-style: dashed;
 }
 .menu {
   width:20%;
   height: 90%;
   float:right;
   border-left-style: dashed;
+  border-bottom-style: dashed;
 }
 .footer {
   width:100%;
   border-top: #000000;
-  border-top-style: dashed;
   text-align: center;
 }
 ul {
