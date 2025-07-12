@@ -1,8 +1,12 @@
+html {
+  height: 100%;
+}
 body {
   background-color: #444444;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: justify;
-  font-size: 12pt;
+  font-size: 10pt;
+  height: 100%;
 }
 h1 {
   color: #ff7700;
@@ -12,10 +16,13 @@ h1 {
 }
 h4 {
   color: #ff7700;
-  font-size: 12pt;
+  font-size: 10pt;
   background-color: #000000;
-  padding-left: 10pt;
-  padding-right: 10pt;
+  margin-left: 1pt;
+  margin-right: 1pt;
+  font-weight: 400;
+  padding-left: 2pt;
+  padding-right: 2pt;
 }
 p {
   color: #90fe00;
@@ -25,7 +32,7 @@ p {
 }
 b {
   font-weight: 300;
-  color: #ee00ff;
+  color: #ff7700;
 }
 .header {
   width:100%;
@@ -34,18 +41,25 @@ b {
   border-bottom-style: dashed;
 }
 .main {
-  width:70%;
+  width:79%;
+  height: 90%;
   float:left;
   border-top: #000000;
-  border-right-style: dashed;
 }
 .menu {
-  width:30%;
+  width:20%;
+  height: 90%;
   float:right;
+  border-left-style: dashed;
 }
 .footer {
   width:100%;
   overflow-inline: auto;
   border-top: #000000;
   border-top-style: dashed;
+  text-align: center;
+}
+ul {
+  list-style-image: url('images/bulletbone.png');
+  color:#90fe00;
 }
