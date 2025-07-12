@@ -31,7 +31,10 @@ p {
   padding-right: 10pt;
 }
 b {
-  font-weight: 300;
+  font-weight: bold;
+  color: #ff7700;
+}
+em {
   color: #ff7700;
 }
 .header {
