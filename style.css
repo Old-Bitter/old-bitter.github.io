@@ -44,6 +44,8 @@ ul {
   width: 1148px;
   margin: 0 auto;
   flex-shrink: 0;
+  border: 3px solid #000000;
+  border-bottom: 0;
 }
 
 #contain {
@@ -101,6 +103,4 @@ a:active {
   max-width: 100%;
   height: auto;
   display: block;
-  border: 3px solid #000000;
-  border-bottom: 0;
 }
