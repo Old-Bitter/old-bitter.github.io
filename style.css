@@ -15,18 +15,15 @@ h4 {
   color: #ff7700;
   font-size: 10pt;
   background-color: #000000;
-  margin-left: 1pt;
-  margin-right: 1pt;
+  margin: 0;
   font-weight: 400;
-  padding-left: 2pt;
-  padding-right: 2pt;
+  padding: 2pt;
 }
 
 p {
   color: #90fe00;
   text-align: justify;
-  padding-left: 10pt;
-  padding-right: 10pt;
+  padding: 0 10pt;
 }
 
 b {
@@ -38,63 +35,50 @@ em {
   color: #ff7700;
 }
 
+ul {
+  list-style-image: url('images/bulletbone.png');
+  color: #90fe00;
+}
+
 #header {
   width: 1148px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   flex-shrink: 0;
-  border: #000000;
-  border-style: solid;
-  border-width: 3px;
+  border: 3px solid #000000;
   border-bottom: 0;
 }
 
 #contain {
   width: 1148px;
-  margin-left: auto;
-  margin-right: auto;
-  border: #000000;
-  border-style: solid;
-  border-width: 3px;
+  margin: 0 auto;
+  border: 3px solid #000000;
+  border-top: 0;
+  border-bottom: 0;
   display: flex;
   flex-grow: 1;
   overflow: hidden;
+  background-color: #444444;
 }
 
 #main {
   width: 78%;
-  background-color: #444444;
 }
 
 #menu {
   width: 22%;
-  border: #000000;
-  border-left-style: dashed;
-  border-width: 2px;
+  border-left: 2px dashed #000000;
   flex-shrink: 0;
-  background-color: #444444;
 }
 
 #footer {
   width: 1148px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  margin: 0 auto;
   flex-shrink: 0;
   padding: 10px 0;
   color: #90fe00;
   background-color: #444444;
-  border: #000000;
-  border-style: solid;
-  border-width: 3px;
+  border: 3px solid #000000;
   border-top: 0;
-}
-
-ul {
-  list-style-image: url('images/bulletbone.png');
-  color: #90fe00;
-  font-size: 10pt;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 a:link {
