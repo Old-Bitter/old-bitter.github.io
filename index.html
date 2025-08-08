@@ -13,39 +13,36 @@
 
 <div id="headerinclude"></div>
 
+<div class="contain">
+      <div class="main"></div>
+      <div class="menu"></div>
+</div>
+
+<div id="footerinclude"></div>
+
 <script>
   fetch('header.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('headerinclude').innerHTML = data;
     });
-</script>
 
-            <h4>Week Three - July 28th, 2025</h4>
-            <p>JavaScript loops == hard <em>cries in frustration</em></p>
-
-            <h4>Week Three - July 26th, 2025</h4>
-            <p>Around 3 pm today, I lit a cinnamon-sugared pretzel scented candle and put on Black Sabbath (<em>RIP Ozzy</em>), then got to work.</p>
-
-            <p>I picked up Issue #7 from our class website project for Abdul and me. I'm waiting for the about.html and students.html issues to be resolved to finish. I would also like the input from El and Shan on the CSS changes I made.</p>
-
-            <p>On JustBitter.org, I added an image header and background and cleaned up index.html and style.css. I then did some research on whether I could do includes without PHP or JavaScript, and I couldn't. I then looked into adding a comment section, but it is nearly impossible without a database. I then went back to see if a third-party CMS would be a viable option, but it wasn't. I decided to use GitHub discussions until I learn more.</p>
-
-            <p>I took a lot of L's today and I'm sleepy. Goodnight.</p>
-            
-            <h4>Week One - July 11th, 2025</h4>
-            <p>I guess I'll just make this a personal log of what I'm learning about. I'm taking <em>Using SQL & SQL Server</em>, <em>Intro to Software Development</em>, and <em>Intro to Programming</em> this summer. I'm hoping to use this to practice and display what I learn from those classes here.</p>
-            
-            <h4>Week One - July 9th, 2025</h4>
-            <p>This is my simple website for week one. I haven't made one of these in well over a decade.</p>
-
-<div id="footerinclude"></div>
-
-<script>
   fetch('footer.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('footerinclude').innerHTML = data;
+    });
+
+      fetch('news.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('main').innerHTML = data;
+    });
+
+      fetch('menu.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('menu').innerHTML = data;
     });
 </script>
 
