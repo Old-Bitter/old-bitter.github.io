@@ -14,8 +14,8 @@
 <div id="headerinclude"></div>
 
 <div class="contain">
-      <div class="main"></div>
-      <div class="menu"></div>
+      <div id="main"></div>
+      <div id="menu"></div>
 </div>
 
 <div id="footerinclude"></div>
@@ -33,13 +33,13 @@
       document.getElementById('footerinclude').innerHTML = data;
     });
 
-      fetch('news.html')
+  fetch('news.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('main').innerHTML = data;
     });
 
-      fetch('menu.html')
+  fetch('menu.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('menu').innerHTML = data;

@@ -61,12 +61,12 @@ em {
   overflow: hidden;
 }
 
-.main {
+#main {
   width: 78%;
   background-color: #444444;
 }
 
-.menu {
+#menu {
   width: 22%;
   border: #000000;
   border-left-style: dashed;
