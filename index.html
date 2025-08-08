@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-    <title>Amber's Website</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Student Website">
-    <meta name="keywords" content="HTML, JavaScript, CSS, SQL">
-    <meta name="author" content="Amber Renfroe">
-    <link rel="stylesheet" href="style.css">
-</head>
+<div id="headerinclude"></div>
 
-<body>
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('headerinclude').innerHTML = data;
+    });
+</script>
 
-<div class="header">
-    <img src="images/amberheader.png" alt="Header Image" />
-</div>
-
-    <div class="contain">
-        <div class="main">
             <h4>Week Three - July 28th, 2025</h4>
             <p>JavaScript loops == hard <em>cries in frustration</em></p>
 
@@ -34,24 +25,13 @@
             
             <h4>Week One - July 9th, 2025</h4>
             <p>This is my simple website for week one. I haven't made one of these in well over a decade.</p>
-        </div>
 
-        <div class="menu">
-            <h4>About Me</h4>
-            <ul>
-                <li><b>Name:</b> Amber</li>
-                <li><b>Birthday:</b> 11/29</li>
-                <li><b>MBTI:</b> INTP</li>
-                <li><b>Playing:</b> Dying Light</li>
-            </ul>
-        </div>
-    </div>
+<div id="footerinclude"></div>
 
-<footer>
-    <div class="footer">
-        Amber Renfroe 2025 - <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">Valid CSS</a>
-    </div>
-</footer>
-
-</body>
-</html>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footerinclude').innerHTML = data;
+    });
+</script>
