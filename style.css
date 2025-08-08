@@ -38,7 +38,7 @@ em {
   color: #ff7700;
 }
 
-.header {
+#header {
   width: 1148px;
   margin-left: auto;
   margin-right: auto;
@@ -48,8 +48,7 @@ em {
   border-width: 3px;
   border-bottom: 0;
 }
-
-.contain {
+#contain {
   width: 1148px;
   margin-left: auto;
   margin-right: auto;
@@ -75,7 +74,7 @@ em {
   background-color: #444444;
 }
 
-.footer {
+#footer {
   width: 1148px;
   margin-left: auto;
   margin-right: auto;
