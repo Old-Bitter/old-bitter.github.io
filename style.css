@@ -46,6 +46,7 @@ ul {
   flex-shrink: 0;
   border: 3px solid #000000;
   border-bottom: 0;
+  width: 90%;
 }
 
 #contain {
@@ -56,6 +57,7 @@ ul {
   flex-grow: 1;
   overflow: hidden;
   background-color: #444444;
+  width: 90%;
 }
 
 #main {
