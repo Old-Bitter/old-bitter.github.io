@@ -26,6 +26,11 @@ p {
   padding: 0 10pt;
 }
 
+p.center {
+  text-align: center;
+  color: #90fe00;
+}
+
 b {
   font-weight: bold;
   color: #ff7700;
