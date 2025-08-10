@@ -104,3 +104,7 @@ a:active {
   height: auto;
   display: block;
 }
+
+#batdiv img {
+  text-align: center;
+}
