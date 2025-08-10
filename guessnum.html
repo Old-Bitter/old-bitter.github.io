@@ -5,32 +5,3 @@
 <button onclick="checkGuess()">Guess</button>
 
 <p id="results"></p>
-
-    <script>
-    // variable to get random number
-        var secretNumber = Math.floor(Math.random() * 10) + 1;
-    // Check Guess Function
-        function checkGuess() {
-        var guessInput = document.getElementById('guessInput');
-        var results = document.getElementById('results');
-        var secretGuess = parseInt(guessInput.value);
-
-    // Check if input is a number and within range
-        if (isNaN(secretGuess) || secretGuess < 1 || secretGuess > 10) {
-            results.textContent = "Please enter a valid number between 1 and 10.";
-        } else {
-    // Check for a correct guess first
-            if (secretNumber === secretGuess) {
-                results.textContent = "Woo! You guessed correctly! The secret number was " + secretNumber + "!";
-    // Disable the button to prevent more guesses after a correct guess
-                document.querySelector('button').disabled = true;
-            } else if (secretGuess < secretNumber) {
-    // Hint for an incorrect guess that is too low
-                results.textContent = "Aww, you guessed wrong! The secret number is higher. Try again!";
-            } else {
-    // Hint for an incorrect guess that is too high
-                results.textContent = "Aww, you guessed wrong! The secret number is lower. Try again!";
-            }
-        }
-    }
-    </script>
