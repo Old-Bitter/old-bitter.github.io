@@ -142,6 +142,7 @@ select {
   border: 1px solid #000000;
   background-color: #ff7700;
   color:#000000;
+  margin-left: 10px;
 }
 
 button {
@@ -157,4 +158,5 @@ button {
   border: 1px solid #000000;
   background-color: #ff7700;
   color:#000000;
+  margin-left: 10px;
 }
