@@ -43,8 +43,6 @@ em {
 ul {
   list-style-image: url('images/bulletbone.png');
   color: #90fe00;
-  list-style-position: inside;
-  text-align: justify;
 }
 
 #header {
