@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <title>Amber's Website</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Student Website">
+    <meta name="keywords" content="HTML, JavaScript, CSS, SQL">
+    <meta name="author" content="Amber Renfroe">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div id="contain">
+      <div id="main"></div>
+      <div id="menu"></div>
+</div>
+
+<footer>
+<div id="footer"></div>
+</footer>
+
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+
+  fetch('guessnum.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('main').innerHTML = data;
+    });
+
+  fetch('menu.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('menu').innerHTML = data;
+    });
+</script>
+
+</body>
+</html>
