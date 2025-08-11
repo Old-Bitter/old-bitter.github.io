@@ -36,27 +36,12 @@ b, em {
 }
 
 ul {
-  list-style: none;
+  list-style-image: url('images/bulletbone.png');;
   color: #90fe00;
 }
 
 li {
-  position: relative;
-  padding-left: 5px;
   margin: 0;
-}
-
-li:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 60%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 15px;
-    background-image: url('images/bulletbone.png');
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 #header, #contain, #footer {
@@ -95,6 +80,10 @@ li:before {
   border-top: 0;
 }
 
+.center {
+  text-align: center;
+}
+
 a:link {
   color: #ff7700;
   text-decoration: underline;
@@ -122,6 +111,6 @@ button {
   color: #000000;
   width: 10%;
   font-weight: bold;
-  height: 15px;
+  height: 20px;
   box-sizing: border-box;
 }
