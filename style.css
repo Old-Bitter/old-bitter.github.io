@@ -26,17 +26,12 @@ p {
   padding: 0 10pt;
 }
 
-p.center {
+.textcenter {
   text-align: center;
-  color: #90fe00;
 }
 
-b {
+b, em {
   font-weight: bold;
-  color: #ff7700;
-}
-
-em {
   color: #ff7700;
 }
 
@@ -47,7 +42,7 @@ ul {
 
 li {
   position: relative;
-  padding-left: 25px;
+  padding-left: 5px;
   margin: 0;
 }
 
@@ -64,24 +59,23 @@ li:before {
     background-repeat: no-repeat;
 }
 
-#header {
+#header, #contain, #footer {
   max-width: 1148px;
   margin: 0 auto;
   flex-shrink: 0;
   border: 3px solid #000000;
-  border-bottom: 0;
   width: 90%;
 }
 
+#header {
+  border-bottom: 0;
+}
+
 #contain {
-  max-width: 1148px;
-  margin: 0 auto;
-  border: 3px solid #000000;
   display: flex;
   flex-grow: 1;
   overflow: hidden;
   background-color: #444444;
-  width: 90%;
 }
 
 #main {
@@ -95,13 +89,9 @@ li:before {
 }
 
 #footer {
-  width: 1148px;
-  margin: 0 auto;
-  flex-shrink: 0;
   padding: 10px 0;
   color: #90fe00;
   background-color: #444444;
-  border: 3px solid #000000;
   border-top: 0;
 }
 
@@ -115,11 +105,7 @@ a:visited {
   text-decoration: line-through;
 }
 
-a:hover {
-  color: #000000;
-}
-
-a:active {
+a:hover, a:active {
   color: #000000;
 }
 
@@ -129,29 +115,13 @@ a:active {
   display: block;
 }
 
-img.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
+#guessInput,
 button {
   background-color: #ff7700;
   border: 1px solid #000000;
   color: #000000;
   width: 10%;
   font-weight: bold;
-  margin-left: 15px;
   height: 15px;
-}
-
-#guessInput {
-  width: 10%;
-  padding: 0 10px;
-  border: 1px solid #000000;
-  background-color: #ff7700;
-  color:#000000;
-  font-weight: bold;
-  margin-left: 15px;
-  height: 15px;
+  box-sizing: border-box;
 }
