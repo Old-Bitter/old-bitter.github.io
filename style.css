@@ -26,10 +26,6 @@ p {
   padding: 0 10pt;
 }
 
-.textcenter {
-  text-align: center;
-}
-
 b, em {
   font-weight: bold;
   color: #ff7700;
@@ -80,7 +76,7 @@ li {
   border-top: 0;
 }
 
-.center {
+p.center {
   text-align: center;
 }
 
