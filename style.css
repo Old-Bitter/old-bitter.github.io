@@ -138,6 +138,7 @@ button {
 .inputs label {
   display: block;
   color: #ff7700;
+  padding: 10px 0;
 }
 
 .storyOutput {
