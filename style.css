@@ -164,6 +164,7 @@ button {
 }
 
 ::placeholder {
-  color: #90fe00;
+  color: #fff;
   opacity: 1;
+  font-style: italic;
 }
