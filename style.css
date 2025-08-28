@@ -33,7 +33,6 @@ em {
 
 ul {
   list-style-image: url('images/bulletbone.png');
-  ;
   color: #90fe00;
 }
 
@@ -118,7 +117,6 @@ button {
   width: 30%;
   font-weight: bold;
   height: 20px;
-  margin: 10px;
   box-sizing: border-box;
 }
 
@@ -134,17 +132,17 @@ button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 0 5px;
+  padding: 0 10pt;
 }
 
 .inputs label {
   display: block;
   color: #ff7700;
-  padding: 10px 0;
+  padding: 0 10pt;
 }
 
 .storyOutput {
   color: #90fe00;
   white-space: pre-wrap;
-  padding: 10px 0;
+  padding: 0 10pt;
 }
