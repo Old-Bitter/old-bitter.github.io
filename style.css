@@ -150,3 +150,7 @@ button {
 .inputs {
   padding-left: 20px;
 }
+
+.inputs + button {
+  margin-top: 20px;
+}
