@@ -133,7 +133,7 @@ button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 0 5px;
+  padding: 10px 5px;
 }
 
 .inputs label {
