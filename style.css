@@ -146,3 +146,7 @@ button {
   white-space: pre-wrap;
   padding: 0 10pt;
 }
+
+.inputs {
+  margin-left: 20px;
+}
