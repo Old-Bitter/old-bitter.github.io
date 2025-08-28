@@ -25,32 +25,9 @@
     </footer>
 
     <script>
-        // Fetching header, footer, news, and menu content
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-            });
+        // Madlibs logic, defined outside any specific event handler.
+        // This code can be moved to a separate .js file for better organization.
 
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            });
-
-        fetch('madlibs.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('main').innerHTML = data;
-            });
-
-        fetch('menu.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('menu').innerHTML = data;
-            });
-
-        // Madlibs
         // Object constructor
         function mlStory(id, title, words, storyTemplate) {
             this.id = id;
@@ -59,26 +36,26 @@
             this.storyTemplate = storyTemplate;
 
             // HTML method for fields and buttons
-            this.generateHTML = function () {
+            this.generateHTML = function() {
                 let inputsHTML = '';
                 this.words.forEach(word => {
                     inputsHTML += `
-                <label for="${word.id}">${word.label}:</label>
-                <input type="text" id="${word.id}" placeholder="${word.placeholder}" />
-            `;
+                        <label for="${word.id}">${word.label}:</label>
+                        <input type="text" id="${word.id}" placeholder="${word.placeholder}" />
+                    `;
                 });
                 return `
-            <h1>${this.title}</h1>
-            <div class="inputs">${inputsHTML}</div>
-            <button onclick="generateStory()">Generate Story</button>
-            <button onclick="shareStory()">Copy Shareable Link</button>
-            <div id="${this.id}Output" class="storyOutput"></div>
-            <div id="${this.id}Message" class="shareMessage"></div>
-        `;
+                    <h1>${this.title}</h1>
+                    <div class="inputs">${inputsHTML}</div>
+                    <button onclick="generateStory()">Generate Story</button>
+                    <button onclick="shareStory()">Copy Shareable Link</button>
+                    <div id="${this.id}Output" class="storyOutput"></div>
+                    <div id="${this.id}Message" class="shareMessage"></div>
+                `;
             };
 
             // Method for story creation
-            this.generateStoryText = function () {
+            this.generateStoryText = function() {
                 const values = {};
                 let allFieldsFilled = true;
                 this.words.forEach(word => {
@@ -107,29 +84,91 @@
             story1: new mlStory(
                 'story1',
                 'Carnival of Clowns',
-                [
-                    { id: 'story1Name1', label: "Person's Name", placeholder: 'Bob Barker' },
-                    { id: 'story1Adjective1', label: 'Adjective', placeholder: 'smelly' },
-                    { id: 'story1Adjective2', label: 'Adjective', placeholder: 'slimey' },
-                    { id: 'story1Adjective3', label: 'Adjective', placeholder: 'bright' },
-                    { id: 'story1VerbIng', label: 'Verb ending in -ing', placeholder: 'dancing' },
-                    { id: 'story1PluralNoun1', label: 'Plural Noun', placeholder: 'cookies' },
-                    { id: 'story1PluralNoun2', label: 'Plural Noun', placeholder: 'pills' },
-                    { id: 'story1Noun1', label: 'Noun', placeholder: 'popcorn' },
-                    { id: 'story1Noun2', label: 'Noun', placeholder: 'lady bug' },
-                    { id: 'story1Noun3', label: 'Noun', placeholder: 'candle' },
-                    { id: 'story1Noun4', label: 'Noun', placeholder: 'booth' },
-                    { id: 'story1Verb1', label: 'Verb (past tense)', placeholder: 'fainted' },
-                    { id: 'story1Verb2', label: 'Verb (past tense)', placeholder: 'whistled' },
-                    { id: 'story1Adverb', label: 'Adverb', placeholder: 'slowly' },
-                    { id: 'story1Color', label: 'Color', placeholder: 'red' },
-                    { id: 'story1Emotion', label: 'Emotion', placeholder: 'happy' },
-                    { id: 'story1Place', label: 'Place', placeholder: 'dumpster' },
-                    { id: 'story1Clothing', label: 'Piece of Clothing', placeholder: 'hat' },
-                    { id: 'story1Sound', label: 'Sound', placeholder: 'giggle' },
-                    { id: 'story1Body', label: 'Body Part', placeholder: 'nose' },
-                    { id: 'story1Exclamation', label: 'Exclamation', placeholder: 'ahhhhh' },
-                ],
+                [{
+                    id: 'story1Name1',
+                    label: "Person's Name",
+                    placeholder: 'Bob Barker'
+                }, {
+                    id: 'story1Adjective1',
+                    label: 'Adjective',
+                    placeholder: 'smelly'
+                }, {
+                    id: 'story1Adjective2',
+                    label: 'Adjective',
+                    placeholder: 'slimey'
+                }, {
+                    id: 'story1Adjective3',
+                    label: 'Adjective',
+                    placeholder: 'bright'
+                }, {
+                    id: 'story1VerbIng',
+                    label: 'Verb ending in -ing',
+                    placeholder: 'dancing'
+                }, {
+                    id: 'story1PluralNoun1',
+                    label: 'Plural Noun',
+                    placeholder: 'cookies'
+                }, {
+                    id: 'story1PluralNoun2',
+                    label: 'Plural Noun',
+                    placeholder: 'pills'
+                }, {
+                    id: 'story1Noun1',
+                    label: 'Noun',
+                    placeholder: 'popcorn'
+                }, {
+                    id: 'story1Noun2',
+                    label: 'Noun',
+                    placeholder: 'lady bug'
+                }, {
+                    id: 'story1Noun3',
+                    label: 'Noun',
+                    placeholder: 'candle'
+                }, {
+                    id: 'story1Noun4',
+                    label: 'Noun',
+                    placeholder: 'booth'
+                }, {
+                    id: 'story1Verb1',
+                    label: 'Verb (past tense)',
+                    placeholder: 'fainted'
+                }, {
+                    id: 'story1Verb2',
+                    label: 'Verb (past tense)',
+                    placeholder: 'whistled'
+                }, {
+                    id: 'story1Adverb',
+                    label: 'Adverb',
+                    placeholder: 'slowly'
+                }, {
+                    id: 'story1Color',
+                    label: 'Color',
+                    placeholder: 'red'
+                }, {
+                    id: 'story1Emotion',
+                    label: 'Emotion',
+                    placeholder: 'happy'
+                }, {
+                    id: 'story1Place',
+                    label: 'Place',
+                    placeholder: 'dumpster'
+                }, {
+                    id: 'story1Clothing',
+                    label: 'Piece of Clothing',
+                    placeholder: 'hat'
+                }, {
+                    id: 'story1Sound',
+                    label: 'Sound',
+                    placeholder: 'giggle'
+                }, {
+                    id: 'story1Body',
+                    label: 'Body Part',
+                    placeholder: 'nose'
+                }, {
+                    id: 'story1Exclamation',
+                    label: 'Exclamation',
+                    placeholder: 'ahhhhh'
+                }, ],
                 // Carnival of Clowns story
                 (v) => `It was a ${v.story1Adjective1} and stormy night when ${v.story1Name1} and I decided to visit the carnival.
         The air was filled with a ${v.story1Adjective3} sound and the warm scents of cotton candy and funnel cake. The rides were shut down and the ${v.story1PluralNoun1} were stored away. We walked past a ${v.story1Noun4} where a few clowns were standing and ${v.story1VerbIng} at us creepily. We felt ${v.story1Emotion} and tried to stay calm, but it was increasingly difficult. One clown, with a ${v.story1Color} polka-dot suit and a huge ${v.story1Body}, pointed at us and let out a chilling scream. We immediately ${v.story1Verb1} away towards the ${v.story1Noun3}. We found ourselves trapped at a dead end. We searched for a way out and eventually stumbled into a maze of funhouse mirrors. Every mirror showed us a ${v.story1Adjective2} version of ourselves only wearing a ${v.story1Clothing}. From behind us, we heard a ${v.story1Sound}. We had to get out immediately. We ${v.story1Verb2} ${v.story1Adverb} past the mirrored reflections and found our way out through the ${v.story1Place}. As we exited, a final clown appeared and gave us a ${v.story1Noun2}. "${v.story1Exclamation}!" we cried, running away as fast as we could.
@@ -140,21 +179,56 @@
             story2: new mlStory(
                 'story2',
                 'Camp Dread',
-                [
-                    { id: 'story2PersonName', label: "Person's Name", placeholder: 'Jason Voorhees' },
-                    { id: 'story2Noun1', label: 'Noun', placeholder: 'chicken' },
-                    { id: 'story2Verb1', label: 'Verb (past tense)', placeholder: 'yelled' },
-                    { id: 'story2PluralNoun1', label: 'Plural Noun', placeholder: 'tacos' },
-                    { id: 'story2Adjective1', label: 'Adjective', placeholder: 'squiggly' },
-                    { id: 'story2Adjective2', label: 'Adjective', placeholder: 'silent' },
-                    { id: 'story2VerbIng1', label: 'Verb ending in -ing', placeholder: 'starving' },
-                    { id: 'story2BodyPart1', label: 'Body Part', placeholder: 'eye' },
-                    { id: 'story2Food1', label: 'Type of Food', placeholder: 'sushi' },
-                    { id: 'story2Number1', label: 'Number', placeholder: '20' },
-                    { id: 'story2Noun2', label: 'Noun', placeholder: 'grenade' },
-                    { id: 'story2Sound1', label: 'Sound', placeholder: 'gasp' },
-                ],
-                // Camp Dread story template
+                [{
+                    id: 'story2PersonName',
+                    label: "Person's Name",
+                    placeholder: 'Jason Voorhees'
+                }, {
+                    id: 'story2Noun1',
+                    label: 'Noun',
+                    placeholder: 'chicken'
+                }, {
+                    id: 'story2Verb1',
+                    label: 'Verb (past tense)',
+                    placeholder: 'yelled'
+                }, {
+                    id: 'story2PluralNoun1',
+                    label: 'Plural Noun',
+                    placeholder: 'tacos'
+                }, {
+                    id: 'story2Adjective1',
+                    label: 'Adjective',
+                    placeholder: 'squiggly'
+                }, {
+                    id: 'story2Adjective2',
+                    label: 'Adjective',
+                    placeholder: 'silent'
+                }, {
+                    id: 'story2VerbIng1',
+                    label: 'Verb ending in -ing',
+                    placeholder: 'starving'
+                }, {
+                    id: 'story2BodyPart1',
+                    label: 'Body Part',
+                    placeholder: 'eye'
+                }, {
+                    id: 'story2Food1',
+                    label: 'Type of Food',
+                    placeholder: 'sushi'
+                }, {
+                    id: 'story2Number1',
+                    label: 'Number',
+                    placeholder: '20'
+                }, {
+                    id: 'story2Noun2',
+                    label: 'Noun',
+                    placeholder: 'grenade'
+                }, {
+                    id: 'story2Sound1',
+                    label: 'Sound',
+                    placeholder: 'gasp'
+                }, ],
+                // Corrected Camp Dread story template
                 (v) => `It was a dark summer night at Camp Dread, a place known for its ${v.story2Adjective1} stories about ${v.story2PersonName}. We were all sitting around the campfire, telling tales of ${v.story2PluralNoun1} when we heard a ${v.story2Adjective2} ${v.story2Sound1}. We all ${v.story2Verb1} and looked at each other, our ${v.story2BodyPart1}s alert and shaking. We quickly ran back to our ${v.story2Noun1}, but as we opened the door, we found all of our ${v.story2Food1} missing! As we looked around, we saw a silhouette in the distance, ${v.story2VerbIng1} with a ${v.story2Noun2} in their hand. "${v.story2PersonName}!" one of us yelled. We slammed the door shut and barricaded it with ${v.story2Number1} chairs. We stayed up all night, waiting, but we never saw ${v.story2PersonName} again.`
             ),
 
@@ -162,25 +236,75 @@
             story3: new mlStory(
                 'story3',
                 'The Comedian',
-                [
-                    { id: 'story3Name1', label: "Comedian's Name", placeholder: 'Chris Rock' },
-                    { id: 'story3Verb1', label: 'Verb', placeholder: 'dance' },
-                    { id: 'story3Adjective1', label: 'Adjective', placeholder: 'boring' },
-                    { id: 'story3Emotion1', label: 'Emotion', placeholder: 'exhausted' },
-                    { id: 'story3VerbIng1', label: 'Verb ending in -ing', placeholder: 'swaying' },
-                    { id: 'story3Noun1', label: 'Noun', placeholder: 'snake' },
-                    { id: 'story3Sound1', label: 'Sound', placeholder: 'gasp' },
-                    { id: 'story3Adverb1', label: 'Adverb', placeholder: 'loudly' },
-                    { id: 'story3Number1', label: 'Number', placeholder: '2' },
-                    { id: 'story3BodyPart1', label: 'Body Part', placeholder: 'belly button' },
-                    { id: 'story3Clothing1', label: 'Piece of Clothing', placeholder: 'sock' },
-                    { id: 'story3AdjectiveSet1', label: 'Adjective', placeholder: 'wet' },
-                    { id: 'story3AdjectiveSet2', label: 'Adjective', placeholder: 'dry' },
-                    { id: 'story3AdjectiveSet3', label: 'Adjective', placeholder: 'moist' },
-                    { id: 'story3NounSet1', label: 'Noun', placeholder: 'sandwich' },
-                    { id: 'story3NounSet2', label: 'Noun', placeholder: 'dog' },
-                    { id: 'story3NounSet3', label: 'Noun', placeholder: 'banana' },
-                ],
+                [{
+                    id: 'story3Name1',
+                    label: "Comedian's Name",
+                    placeholder: 'Chris Rock'
+                }, {
+                    id: 'story3Verb1',
+                    label: 'Verb',
+                    placeholder: 'dance'
+                }, {
+                    id: 'story3Adjective1',
+                    label: 'Adjective',
+                    placeholder: 'boring'
+                }, {
+                    id: 'story3Emotion1',
+                    label: 'Emotion',
+                    placeholder: 'exhausted'
+                }, {
+                    id: 'story3VerbIng1',
+                    label: 'Verb ending in -ing',
+                    placeholder: 'swaying'
+                }, {
+                    id: 'story3Noun1',
+                    label: 'Noun',
+                    placeholder: 'snake'
+                }, {
+                    id: 'story3Sound1',
+                    label: 'Sound',
+                    placeholder: 'gasp'
+                }, {
+                    id: 'story3Adverb1',
+                    label: 'Adverb',
+                    placeholder: 'loudly'
+                }, {
+                    id: 'story3Number1',
+                    label: 'Number',
+                    placeholder: '2'
+                }, {
+                    id: 'story3BodyPart1',
+                    label: 'Body Part',
+                    placeholder: 'belly button'
+                }, {
+                    id: 'story3Clothing1',
+                    label: 'Piece of Clothing',
+                    placeholder: 'sock'
+                }, {
+                    id: 'story3AdjectiveSet1',
+                    label: 'Adjective',
+                    placeholder: 'wet'
+                }, {
+                    id: 'story3AdjectiveSet2',
+                    label: 'Adjective',
+                    placeholder: 'dry'
+                }, {
+                    id: 'story3AdjectiveSet3',
+                    label: 'Adjective',
+                    placeholder: 'moist'
+                }, {
+                    id: 'story3NounSet1',
+                    label: 'Noun',
+                    placeholder: 'sandwich'
+                }, {
+                    id: 'story3NounSet2',
+                    label: 'Noun',
+                    placeholder: 'dog'
+                }, {
+                    id: 'story3NounSet3',
+                    label: 'Noun',
+                    placeholder: 'banana'
+                }, ],
                 // The Comedian story template
                 (v) => `It was a sold-out show for the hot, new up-and-coming comedian, ${v.story3Name1}. The audience was excited, ready to ${v.story3Verb1} and hear some new jokes. ${v.story3Name1} walked out onto the stage, dressed in a ${v.story3Adjective1} ${v.story3Clothing1}, and the audience started ${v.story3VerbIng1}. The comedian grabbed a ${v.story3Noun1} and said, "What do you get when you combine a ${v.story3AdjectiveSet1} ${v.story3NounSet1} and a ${v.story3AdjectiveSet2} ${v.story3NounSet2}? A ${v.story3AdjectiveSet3} ${v.story3NounSet3}!" The crowd was silent. A few people were ${v.story3Emotion1}, but everyone else was quiet. ${v.story3Name1} saw someone pointing and giggling at him from the crowd. ${v.story3Name1} looked down and saw that their ${v.story3BodyPart1} was stuck in their ${v.story3Adjective1} ${v.story3Clothing1}. The crowd laughed so ${v.story3Adverb1} that a person in the back of the room let out a loud ${v.story3Sound1} that was heard from ${v.story3Number1} blocks away. ${v.story3Name1} ran off the stage in embarassment, and that's when the audience finally began to laugh.`
             ),
@@ -239,37 +363,64 @@
             }
         }
 
-        // Function for loading a linked story
-        window.onload = function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            const storyId = urlParams.get('story');
+        // Fetching content and initializing after it's loaded
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
 
-            if (storyId) {
-                document.getElementById('storyDropdown').value = storyId;
-                createUI(storyId);
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
 
-                setTimeout(() => {
-                    urlParams.forEach((value, key) => {
-                        const inputElement = document.getElementById(key);
-                        if (inputElement) {
-                            inputElement.value = value;
-                        }
+        fetch('madlibs.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('main').innerHTML = data;
+
+                // Get the dropdown and attach the event listener.
+                const storyDropdown = document.getElementById('storyDropdown');
+                if (storyDropdown) {
+                    storyDropdown.addEventListener('change', function() {
+                        const selectedStory = this.value;
+                        createUI(selectedStory);
                     });
-                    generateStory();
-                }, 100);
-            }
-        };
+                    // Initial UI creation for the first story
+                    createUI(storyDropdown.value);
+                }
 
-        // Event listener for story change
-        document.getElementById('storyDropdown').addEventListener('change', function () {
-            const selectedStory = this.value;
-            createUI(selectedStory);
-        });
+                // Check for URL parameters to load a linked story
+                const urlParams = new URLSearchParams(window.location.search);
+                const storyId = urlParams.get('story');
+                if (storyId) {
+                    setTimeout(() => {
+                        storyDropdown.value = storyId;
+                        createUI(storyId);
+                        setTimeout(() => {
+                            urlParams.forEach((value, key) => {
+                                const inputElement = document.getElementById(key);
+                                if (inputElement) {
+                                    inputElement.value = value;
+                                }
+                            });
+                            generateStory();
+                        }, 100);
+                    }, 50); // Small delay to ensure UI is ready
+                }
+            });
 
-        // Guess the Number Game
-        // variable to get random number
+        fetch('menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu').innerHTML = data;
+            });
+
+        // Guess the Number Game logic
         var secretNumber = Math.floor(Math.random() * 10) + 1;
-        // Check Guess Function
+
         function checkGuess() {
             var guessInput = document.getElementById('guessInput');
             var results = document.getElementById('results');
@@ -294,7 +445,5 @@
             }
         }
     </script>
-
 </body>
-
 </html>
