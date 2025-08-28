@@ -148,6 +148,13 @@ button {
 
 .inputs {
   padding-left: 20px;
+  background-color: #ff7700;
+  border: 1px solid #000000;
+  color: #000000;
+  width: 30%;
+  font-weight: bold;
+  height: 20px;
+  box-sizing: border-box;
 }
 
 .inputs + button {
