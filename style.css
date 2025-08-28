@@ -150,15 +150,20 @@ button {
   padding-left: 20px;
 }
 
-.inputs + button {
+.inputs+button {
   margin: 20px;
 }
 
 .inputs input {
-    background-color: #ff7700;
-    border: 1px solid #000000;
-    color: #000000;
-    font-weight: bold;
-    height: 20px;
-    box-sizing: border-box;
+  background-color: #ff7700;
+  border: 1px solid #000000;
+  color: #000000;
+  font-weight: bold;
+  height: 20px;
+  box-sizing: border-box;
+}
+
+::placeholder {
+  color: #90fe00;
+  opacity: 1;
 }
