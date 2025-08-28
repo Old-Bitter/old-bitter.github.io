@@ -154,7 +154,6 @@ button {
   width: 30%;
   font-weight: bold;
   height: 20px;
-  box-sizing: border-box;
 }
 
 .inputs + button {
