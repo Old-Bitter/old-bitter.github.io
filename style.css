@@ -139,3 +139,9 @@ button {
   display: block;
   color: #ff7700;
 }
+
+.storyOutput {
+  color: #90fe00;
+  white-space: pre-wrap;
+  padding: 10px 0;
+}
