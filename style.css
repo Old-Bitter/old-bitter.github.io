@@ -118,7 +118,7 @@ button {
   width: 30%;
   font-weight: bold;
   height: 20px;
-  padding: 10px 0;
+  margin: 10px;
   box-sizing: border-box;
 }
 
@@ -134,7 +134,7 @@ button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 5px 5px;
+  padding: 0 5px;
 }
 
 .inputs label {
